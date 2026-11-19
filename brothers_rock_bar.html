@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Brothers Rock Bar — boa música, cerveja gelada e noites memoráveis no Centro de Ribeirão Pires.">
+<title>Brothers Rock Bar | Ribeirão Pires</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--red:#e32636;--dark:#090909;--panel:#151515;--white:#f5f5f5;--muted:#aaa}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background:var(--dark);color:var(--white);font-family:Montserrat,sans-serif}
+a{color:inherit;text-decoration:none}.container{width:min(90%,1250px);margin:auto}
+header{position:absolute;inset:0 0 auto;z-index:10;border-bottom:1px solid #ffffff20}
+.navbar{min-height:85px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo,.footer-logo{font:700 27px Oswald,sans-serif;letter-spacing:2px}.logo span,.footer-logo span{color:var(--red)}
+.nav-links{display:flex;gap:30px;list-style:none}.nav-links a,.nav-button{font-size:11px;font-weight:800;letter-spacing:1px}
+.nav-links a:hover{color:var(--red)}.nav-button{background:var(--red);padding:14px 20px}
+.hero{min-height:740px;height:100vh;max-height:950px;display:flex;align-items:center;background:linear-gradient(90deg,#000 0%,#000b 48%,#0004 100%),linear-gradient(0deg,var(--dark),transparent 35%),url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=85&w=2000') center/cover}
+.hero-content{max-width:850px;padding-top:70px}.eyebrow,.section-label{color:var(--red);font-size:11px;font-weight:800;letter-spacing:4px;margin-bottom:20px}
+.hero h1{font:700 clamp(65px,10vw,125px)/.92 Oswald,sans-serif}.hero h1 span,.section-title span{color:var(--red);display:block}
+.hero p,.intro-text{color:#c4c4c4;line-height:1.9;font-size:14px;max-width:540px;margin:28px 0}
+.actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 23px;font-size:10px;font-weight:800;letter-spacing:1px;transition:.25s}
+.btn-red{background:var(--red)}.btn-red:hover{background:#fff;color:#111;transform:translateY(-3px)}
+.btn-outline{border:1px solid #ffffff60}.btn-outline:hover{border-color:var(--red);color:var(--red)}
+.ticker{overflow:hidden;background:var(--red);padding:15px 0;white-space:nowrap}.ticker-track{display:flex;width:max-content;animation:move 28s linear infinite}
+.ticker span{font:600 17px Oswald,sans-serif;letter-spacing:3px;padding:0 28px}@keyframes move{to{transform:translateX(-50%)}}
+.intro{padding:110px 0;display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.section-title{font:600 clamp(38px,5vw,65px)/1.05 Oswald,sans-serif;text-transform:uppercase}
+.intro-image{position:relative}.intro-image img{width:100%;height:420px;object-fit:cover;filter:grayscale(25%)}
+.image-caption{position:absolute;bottom:-18px;left:-20px;background:var(--red);padding:17px 25px;font:600 20px Oswald,sans-serif}
+.experience{background:#121212;padding:100px 0}.center-title{text-align:center;margin-bottom:50px}.center-title .section-title{margin-bottom:13px}.center-title p{font-size:12px;color:#888}
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.experience-card{height:350px;position:relative;overflow:hidden}
+.experience-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.58);transition:.5s}
+.experience-card:hover img{transform:scale(1.08);filter:brightness(.38)}
+.experience-info{position:absolute;bottom:25px;left:25px;right:20px}.experience-info i{color:var(--red);font-size:23px;margin-bottom:13px}
+.experience-info h3{font:600 27px Oswald,sans-serif;text-transform:uppercase}.experience-info p{font-size:11px;color:#ddd;line-height:1.7;margin-top:7px}
+.menu{padding:105px 0}.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;margin-top:45px}
+.menu-category h3{font:600 27px Oswald,sans-serif;border-bottom:2px solid var(--red);padding-bottom:15px;margin-bottom:20px}
+.menu-item{display:flex;justify-content:space-between;gap:15px;padding:17px 0;border-bottom:1px solid #ffffff18}
+.menu-item h4{font-size:13px;margin-bottom:6px}.menu-item p{font-size:10px;color:#888;line-height:1.6}
+.menu-price{font:500 18px Oswald,sans-serif;color:var(--red);white-space:nowrap}
+.menu-note{font-size:10px;color:#777;margin-top:28px}
+.rock-section{padding:115px 0;text-align:center;background:linear-gradient(#000c,#000d),url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=85&w=1800') center/cover fixed}
+.rock-section h2{font:700 clamp(45px,8vw,85px)/1 Oswald,sans-serif;margin-bottom:22px}.rock-section h2 span{color:var(--red)}
+.rock-section p{max-width:580px;margin:auto;color:#ccc;font-size:12px;line-height:1.9}
+.location{padding:105px 0}.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.location-info>p{color:#999;font-size:12px;line-height:1.9;margin:18px 0 25px}
+.detail{display:flex;align-items:center;gap:15px;margin:22px 0}.detail i{color:var(--red);font-size:19px;width:22px}
+.detail strong{display:block;font-size:12px;margin-bottom:5px}.detail span{color:#888;font-size:11px}
+.map-panel{min-height:350px;background:linear-gradient(#0006,#0006),url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=85&w=1200') center/cover;display:grid;place-items:center}
+.map-panel a{background:var(--red);padding:17px 22px;font-size:10px;font-weight:800}
+footer{background:#050505;border-top:1px solid #ffffff15;text-align:center;padding:50px 0 22px}
+.footer-logo{font-size:34px}footer p{color:#777;font-size:10px;margin:12px 0 22px}
+.socials{display:flex;justify-content:center;gap:14px;margin-bottom:30px}.socials a{width:40px;height:40px;border:1px solid #444;display:grid;place-items:center}
+.socials a:hover{background:var(--red);border-color:var(--red)}.copyright{border-top:1px solid #ffffff15;padding-top:20px;color:#555;font-size:9px}
+@media(max-width:800px){.nav-links{display:none}.navbar{min-height:75px}.hero{min-height:680px;background-position:60% center}.hero h1{font-size:clamp(62px,13vw,82px)}.intro,.location-grid{grid-template-columns:1fr;gap:45px}.intro-image img{height:320px}.image-caption{left:0}.experience-grid{grid-template-columns:1fr}.experience-card{height:300px}.menu-grid{grid-template-columns:1fr;gap:40px}.rock-section{background-attachment:scroll}}
+@media(max-width:480px){.logo{font-size:21px}.nav-button{padding:11px 12px;font-size:9px}.hero p{font-size:12px}.btn{padding:14px 16px}}
+</style>
+</head>
+<body>
+<header><div class="container navbar">
+<a class="logo" href="#">BROTHERS<span>.</span> ROCK BAR</a>
+<ul class="nav-links"><li><a href="#sobre">O BAR</a></li><li><a href="#experiencia">EXPERIÊNCIA</a></li><li><a href="#cardapio">CARDÁPIO</a></li><li><a href="#localizacao">LOCALIZAÇÃO</a></li></ul>
+<a class="nav-button" href="#cardapio">EXPLORE O BAR <i class="fa-solid fa-arrow-right"></i></a>
+</div></header>
+<main>
+<section class="hero"><div class="container"><div class="hero-content">
+<div class="eyebrow">RIBEIRÃO PIRES • SP</div>
+<h1>GOOD BEER.<span>LOUD ROCK.</span>GOOD TIMES.</h1>
+<p>Aqui o volume é alto, a cerveja é gelada e a noite nunca precisa de motivo para começar. Seja bem-vindo ao Brothers Rock Bar.</p>
+<div class="actions"><a class="btn btn-red" href="#cardapio">CONHEÇA O CARDÁPIO <i class="fa-solid fa-arrow-right"></i></a><a class="btn btn-outline" href="#experiencia">DESCUBRA O BROTHERS</a></div>
+</div></div></section>
+<div class="ticker"><div class="ticker-track"><span>★ ROCK N' ROLL</span><span>★ COLD BEER</span><span>★ GOOD FOOD</span><span>★ LIVE MUSIC</span><span>★ BROTHERS ROCK BAR</span><span>★ ROCK N' ROLL</span><span>★ COLD BEER</span><span>★ GOOD FOOD</span><span>★ LIVE MUSIC</span><span>★ BROTHERS ROCK BAR</span></div></div>
+<section class="container intro" id="sobre"><div>
+<div class="section-label">MORE THAN JUST A BAR</div><h2 class="section-title">NÃO É SÓ UM BAR.<span>É UM ESTILO DE VIDA.</span></h2>
+<p class="intro-text">O Brothers Rock Bar é o ponto de encontro de quem gosta de boa música, boas companhias e momentos que merecem ser lembrados.<br><br>Um ambiente descontraído, cheio de personalidade, com bebidas, petiscos e aquela atmosfera que só o rock consegue proporcionar.</p>
+</div><div class="intro-image"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=85&w=1000" alt="Ambiente de bar"><div class="image-caption">LIVE LOUD. DRINK COLD.</div></div></section>
+<section class="experience" id="experiencia"><div class="container">
+<div class="center-title"><div class="section-label">THE BROTHERS EXPERIENCE</div><h2 class="section-title">A NOITE ACONTECE <span>AQUI.</span></h2><p>Uma experiência para quem não abre mão de curtir de verdade.</p></div>
+<div class="experience-grid">
+<article class="experience-card"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=85&w=900" alt="Show de rock ao vivo"><div class="experience-info"><i class="fa-solid fa-guitar"></i><h3>Rock & Música</h3><p>Música ao vivo, apresentações e muito rock para acompanhar sua noite.</p></div></article>
+<article class="experience-card"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=85&w=900" alt="Drinks e coquetéis"><div class="experience-info"><i class="fa-solid fa-martini-glass"></i><h3>Drinks & Beer</h3><p>Drinks, destilados e cervejas geladas para todos os gostos.</p></div></article>
+<article class="experience-card"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=85&w=900" alt="Comida para compartilhar"><div class="experience-info"><i class="fa-solid fa-utensils"></i><h3>Food & Friends</h3><p>Petiscos e porções para compartilhar com quem faz a noite valer a pena.</p></div></article>
+</div></div></section>
+<section class="menu container" id="cardapio"><div class="center-title"><div class="section-label">FOOD, DRINKS & ROCK</div><h2 class="section-title">O QUE VAI <span>PEDIR HOJE?</span></h2><p>Algumas opções que fazem parte da experiência Brothers.</p></div>
+<div class="menu-grid">
+<div class="menu-category"><h3><i class="fa-solid fa-beer-mug-empty"></i> DRINKS & BEBIDAS</h3>
+<div class="menu-item"><div><h4>Gin Tanqueray Tônica</h4><p>Gin Tanqueray com água tônica.</p></div><div class="menu-price">R$ 30</div></div>
+<div class="menu-item"><div><h4>Absinto</h4><p>Uma opção para quem gosta de experimentar.</p></div><div class="menu-price">R$ 20</div></div>
+<div class="menu-item"><div><h4>Heineken</h4><p>Cerveja gelada para acompanhar a noite.</p></div><div class="menu-price">Consultar</div></div>
+</div>
+<div class="menu-category"><h3><i class="fa-solid fa-burger"></i> FOOD & PETISCOS</h3>
+<div class="menu-item"><div><h4>Churrasco com Queijo</h4><p>Lanche de churrasco acompanhado de queijo.</p></div><div class="menu-price">R$ 29</div></div>
+<div class="menu-item"><div><h4>Pão de Alho</h4><p>Uma opção clássica para acompanhar.</p></div><div class="menu-price">R$ 9</div></div>
+<div class="menu-item"><div><h4>Porções Brothers</h4><p>Fritas, calabresa e mandioca.</p></div><div class="menu-price">Consultar</div></div>
+</div></div>
+<p class="menu-note">* Valores de referência sujeitos a alteração. Consulte o estabelecimento para confirmar preços e disponibilidade.</p>
+</section>
+<section class="rock-section"><div class="container"><div class="section-label">TURN IT UP</div><h2>GOOD MUSIC.<br><span>GREAT NIGHTS.</span></h2><p>Reúna os amigos, escolha seu drink e deixe a música fazer o resto. No Brothers, cada noite tem sua própria história.</p></div></section>
+<section class="location" id="localizacao"><div class="container location-grid"><div class="location-info">
+<div class="section-label">FIND YOUR WAY TO ROCK</div><h2 class="section-title">O ROCK TE ESPERA <span>AQUI.</span></h2>
+<p>Estamos no Centro de Ribeirão Pires. Chame os amigos e venha curtir uma noite diferente com a gente.</p>
+<div class="detail"><i class="fa-solid fa-location-dot"></i><div><strong>ONDE ESTAMOS</strong><span>Centro – Ribeirão Pires, SP</span></div></div>
+<div class="detail"><i class="fa-solid fa-wallet"></i><div><strong>FAIXA DE CONSUMO ESTIMADA</strong><span>R$ 40 a R$ 140 por pessoa</span></div></div>
+<div class="detail"><i class="fa-solid fa-music"></i><div><strong>O QUE TE ESPERA</strong><span>Rock, drinks, petiscos e diversão.</span></div></div>
+<a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=Brothers+Rock+Bar+Ribeirao+Pires" target="_blank" rel="noopener">COMO CHEGAR <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+</div><div class="map-panel"><a href="https://www.google.com/maps/search/?api=1&query=Brothers+Rock+Bar+Ribeirao+Pires" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> VER NO MAPS</a></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-logo">BROTHERS<span>.</span> ROCK BAR</div><p>GOOD BEER. LOUD ROCK. GOOD TIMES.</p>
+<div class="socials"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></div>
+<div class="copyright">© 2026 BROTHERS ROCK BAR. TODOS OS DIREITOS RESERVADOS.</div></div></footer>
+</body>
+</html>
